@@ -11,7 +11,7 @@ Taking advantage of the mbtile structure to avoid the whole tileserver thing.
 
 Pulled down a random state geojson like [this one](http://eric.clst.org/wupl/Stuff/gz_2010_us_040_00_20m.json)
 ```
-tippecanoe -o outflile.mbtiles -l test -z -Z0 gz_2010_us_040_00_20m.json 
+tippecanoe -o out.mbtiles -l test -z -Z0 gz_2010_us_040_00_20m.json 
 mb-util --image_format=pbf out.mbtiles out
 gzip -d -r -S .pbf *
 find . -type f -exec mv '{}' '{}'.pbf \;
