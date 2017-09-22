@@ -3,7 +3,7 @@
 Taking advantage of the mbtile structure to avoid the whole tileserver thing.
 
 
-## Here's the approachs
+## Here's the approach
 
 Pulled down a random state geojson like [this one](http://eric.clst.org/wupl/Stuff/gz_2010_us_040_00_20m.json)
 ```
