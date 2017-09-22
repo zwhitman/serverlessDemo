@@ -3,7 +3,7 @@
 Taking advantage of the mbtile structure to avoid the whole tileserver thing.
 
 
-## Steps
+## Here's the approachs
 
 Pulled down a random state geojson like [this one](http://eric.clst.org/wupl/Stuff/gz_2010_us_040_00_20m.json)
 ```
@@ -14,10 +14,10 @@ find . -type f -exec mv '{}' '{}'.pbf \;
 ```
 load folder to s3 instance 
 
+## Getting the client onboard
 Once you have the endpoints, just point your tile source to the folder structure https://s3-us-west-2.amazonaws.com/zwhitman-mbtiletest/out-test/{z}/{x}/{y}.pbf and you're good to go.
 
-
-Here's the code w/ zoom-specific styling:
+### Code w/ zoom-specific styling
 ```javascript
   map.addLayer({
     "id":"test",
