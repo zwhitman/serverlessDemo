@@ -6,7 +6,6 @@
     "mapbox:autocomposite": true,
     "mapbox:type": "template"
   },
-  "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
   "sources": {},
   "layers": [
     {

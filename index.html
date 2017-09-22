@@ -3,8 +3,8 @@
     <meta charset='utf-8' />
     <title></title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='./mapbox-gl.js'></script>
+    <link href='./mapbox-gl.css' rel='stylesheet' />
     <style>
         body { margin:0; padding:0; }
         #map { position:absolute; top:0; bottom:0; width:100%; }
@@ -12,7 +12,9 @@
 </head>
 <body>
 
+
 <div id='map'></div>
+<h1 style="z-index:9999;position:fixed;top:20px;left:20px">Behold - a serverless vector tile set</h1>
 <script>
 var map = new mapboxgl.Map({
     container: 'map',
