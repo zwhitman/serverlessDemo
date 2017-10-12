@@ -19,12 +19,49 @@
 <script>
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'https://s3-us-west-2.amazonaws.com/zwhitman-mbtiletest/test.json',
-    zoom: 4,
+    style: './blank-style.json',
+    zoom: 6,
     center: [-98.5795, 39.8283]
 });
 
 
+map.on('load', function () {
+
+  map.addLayer({
+    "id":"test",
+    "type":"line",
+    "source": {
+        "type": "vector",
+	"tiles": ["https://s3-us-west-2.amazonaws.com/zwhitman-mbtiletest/out-test/{z}/{x}/{y}.pbf"],
+	},
+    "source-layer":"test",
+    "paint": {
+		"line-width": {
+		    "base": 3,
+		    "stops": [
+				[0,5],
+				[12,1]
+			]
+	
+		},
+                "line-color": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            "hsl(109, 58%, 52%)"
+                        ],
+                        [
+                            22,
+                            "hsl(240, 100%, 50%)"
+                        ]
+                    ]
+                }
+            }
+
+    })
+
+});
 
 function test(){
   var b = map.getBounds()
